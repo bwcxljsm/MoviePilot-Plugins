@@ -7,7 +7,7 @@ from app.schemas.types import EventType, NotificationType
 from app.utils.http import RequestUtils
 
 
-class WorkWechatMsg(_PluginBase):
+class WechatBotMsg(_PluginBase):
     # 插件名称
     plugin_name = "微信群机器人消息通知"
     # 插件描述
