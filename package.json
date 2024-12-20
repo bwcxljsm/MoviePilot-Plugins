@@ -920,6 +920,16 @@
             "v1.5": "修复总集数会同步TMDB变动的问题,增加开关选项"
         }
     },
+    "WechatBotMsg": {
+        "name": "微信群机器人消息推送",
+        "description": "微信群聊机器人发送消息通知。",
+        "labels": "消息通知",
+        "version": "1.0",
+        "icon": "Wechat_A.png",
+        "author": "bwcxljsm",
+        "level": 1,
+        "v2": true
+    },
     "IyuuMsg": {
         "name": "IYUU消息推送",
         "description": "支持使用IYUU发送消息通知。",
