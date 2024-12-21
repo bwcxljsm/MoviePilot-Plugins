@@ -164,6 +164,8 @@ class WorkWechatMsg(_PluginBase):
         # 图像
         image = msg_body.get("image")
 
+        logger.info("imgae:"+image)
+        
         if not title and not text:
             logger.warn("标题和内容不能同时为空")
             return
@@ -195,7 +197,7 @@ class WorkWechatMsg(_PluginBase):
                         ]
                     }
                 }
-
+            logger.info("payload:"+payload)
             res = RequestUtils().post_res(url=self._webhookurl, json=payload)
             if res and res.status_code == 200:
                 ret_json = res.json()
