@@ -7,21 +7,21 @@ from app.schemas.types import EventType, NotificationType
 from app.utils.http import RequestUtils
 
 
-class WorkWechataMsg(_PluginBase):
+class AsWechataMsg(_PluginBase):
     # 插件名称
-    plugin_name = "aaaaa企微机器人消息通知"
+    plugin_name = "测试企微机器人消息通知"
     # 插件描述
-    plugin_desc = "支持使用企业微信群聊机器人发送消息通知。"
+    plugin_desc = "测试。"
     # 插件图标
     plugin_icon = "Wecom_A.png"
     # 插件版本
     plugin_version = "1.0"
     # 插件作者
-    plugin_author = "test叮叮当test"
+    plugin_author = "bwcxljsm"
     # 作者主页
-    author_url = "https://github.com/aaaa"
+    author_url = "https://github.com/bwcxljsm"
     # 插件配置项ID前缀
-    plugin_config_prefix = "workwechatamsg_"
+    plugin_config_prefix = "aswechatamsg_"
     # 加载顺序
     plugin_order = 28
     # 可使用的用户级别
