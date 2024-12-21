@@ -17,7 +17,7 @@ class WorkWechatMsg(_PluginBase):
     # 插件版本
     plugin_version = "1.0"
     # 插件作者
-    plugin_author = "叮叮当"
+    plugin_author = "叮叮当test"
     # 作者主页
     author_url = "https://github.com/cikezhu"
     # 插件配置项ID前缀
@@ -165,7 +165,8 @@ class WorkWechatMsg(_PluginBase):
         image = msg_body.get("image")
 
         logger.info("imgae:"+image)
-        
+        logger.warn("imgae:"+image)
+        print(("imgae:"+image))
         if not title and not text:
             logger.warn("标题和内容不能同时为空")
             return
