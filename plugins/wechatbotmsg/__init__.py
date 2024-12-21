@@ -191,11 +191,12 @@ class WechatBotMsg(_PluginBase):
             res = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_img", json=payload1)
             if res and res.status_code == 200:
                 ret_json = res.json()
+                logger.info(ret_json)
                 
             res = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_txt", json=payload)
             if res and res.status_code == 200:
-                ret_json = res.json()
-                logger.info(ret_json)
+                ret_json1 = res.json()
+                logger.info(ret_json1)
             
 
         except Exception as msg_e:
