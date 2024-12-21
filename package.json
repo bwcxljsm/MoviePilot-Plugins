@@ -940,13 +940,13 @@
         "level": 1,
         "v2": true
     },
-    "WorkWechataMsg": {
-        "name": "aaaaa企微机器人消息通知",
-        "description": "支持使用企业微信群聊机器人发送消息通知。",
+    "AsWechataMsg": {
+        "name": "测试企微机器人消息通知",
+        "description": "测试。",
         "labels": "消息通知",
         "version": "1.0",
         "icon": "Wecom_A.png",
-        "author": "test叮叮当test",
+        "author": "测试",
         "level": 1,
         "v2": true
     },
