@@ -5,7 +5,6 @@ from app.log import logger
 from app.plugins import _PluginBase
 from app.schemas.types import EventType, NotificationType
 from app.utils.http import RequestUtils
-import base64
 
 class WechatBotMsg(_PluginBase):
     # 插件名称
@@ -187,11 +186,11 @@ class WechatBotMsg(_PluginBase):
               "path": image,
               "receiver": "51602310530@chatroom"
             }
-            img = base64.b64encode(image)
-            logger.info(img)
-            # res = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_img", json=payload)
-            # if res and res.status_code == 200:
-            #     ret_json = res.json()
+
+
+            res = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_img", json=payload1)
+            if res and res.status_code == 200:
+                ret_json = res.json()
                 
             res = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_txt", json=payload)
             if res and res.status_code == 200:
