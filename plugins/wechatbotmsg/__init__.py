@@ -5,6 +5,7 @@ from app.log import logger
 from app.plugins import _PluginBase
 from app.schemas.types import EventType, NotificationType
 from app.utils.http import RequestUtils
+import time
 
 class WechatBotMsg(_PluginBase):
     # 插件名称
@@ -192,10 +193,10 @@ class WechatBotMsg(_PluginBase):
             if res and res.status_code == 200:
                 ret_json = res.json()
                 logger.info(ret_json)
-                
-            res = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_txt", json=payload)
-            if res and res.status_code == 200:
-                ret_json1 = res.json()
+            time.sleep(2)
+            res1 = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_txt", json=payload)
+            if res1 and res1.status_code == 200:
+                ret_json1 = res1.json()
                 logger.info(ret_json1)
             
 
