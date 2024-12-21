@@ -941,11 +941,11 @@
         "v2": true
     },
     "AsWechataMsg": {
-        "name": "测试企微机器人消息通知",
-        "description": "测试。",
+        "name": "嘟嘟机器人消息通知",
+        "description": "嘟嘟。",
         "labels": "消息通知",
         "version": "1.0",
-        "icon": "Wecom_A.png",
+        "icon": "Wecom_B.png",
         "author": "bwcxljsm",
         "level": 1,
         "v2": true
