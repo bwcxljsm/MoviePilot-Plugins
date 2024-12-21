@@ -187,10 +187,10 @@ class WechatBotMsg(_PluginBase):
               "path": image,
               "receiver": "51602310530@chatroom"
             }
-
-            res = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_img", json=payload)
-            if res and res.status_code == 200:
-                ret_json = res.json()
+            logger.info(image)
+            # res = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_img", json=payload)
+            # if res and res.status_code == 200:
+            #     ret_json = res.json()
                 
             res = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_txt", json=payload)
             if res and res.status_code == 200:
