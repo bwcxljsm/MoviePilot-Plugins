@@ -940,6 +940,16 @@
         "level": 1,
         "v2": true
     },
+    "WorkWechataMsg": {
+        "name": "aaaaa企微机器人消息通知",
+        "description": "支持使用企业微信群聊机器人发送消息通知。",
+        "labels": "消息通知",
+        "version": "1.0",
+        "icon": "Wecom_A.png",
+        "author": "test叮叮当test",
+        "level": 1,
+        "v2": true
+    },
     "IyuuMsg": {
         "name": "IYUU消息推送",
         "description": "支持使用IYUU发送消息通知。",
