@@ -15,7 +15,7 @@ class WechatBotMsg(_PluginBase):
     # 插件图标
     plugin_icon = "Wechat_A.png"
     # 插件版本
-    plugin_version = "1.2"
+    plugin_version = "1.3"
     # 插件作者
     plugin_author = "bwcxljsm"
     # 作者主页
@@ -187,8 +187,6 @@ class WechatBotMsg(_PluginBase):
               "path": image,
               "receiver": "51602310530@chatroom"
             }
-            logger.info("image"+image)
-            logger.info(str(payload1))
 
             res = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_img", json=payload1)
             if res and res.status_code == 200:
