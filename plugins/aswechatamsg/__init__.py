@@ -9,9 +9,9 @@ from app.utils.http import RequestUtils
 
 class AsWechataMsg(_PluginBase):
     # 插件名称
-    plugin_name = "测试企微机器人消息通知"
+    plugin_name = "嘟嘟机器人消息通知"
     # 插件描述
-    plugin_desc = "测试。"
+    plugin_desc = "嘟嘟。"
     # 插件图标
     plugin_icon = "Wecom_A.png"
     # 插件版本
@@ -23,7 +23,7 @@ class AsWechataMsg(_PluginBase):
     # 插件配置项ID前缀
     plugin_config_prefix = "aswechatamsg_"
     # 加载顺序
-    plugin_order = 28
+    plugin_order = 1
     # 可使用的用户级别
     auth_level = 1
 
@@ -205,15 +205,15 @@ class AsWechataMsg(_PluginBase):
                 errno = ret_json.get('errcode')
                 error = ret_json.get('errmsg')
                 if errno == 0:
-                    logger.info("企业微信机器人消息发送成功")
+                    logger.info("嘟嘟机器人消息发送成功")
                 else:
-                    logger.warn(f"企业微信机器人消息发送失败，错误码：{errno}，错误原因：{error}")
+                    logger.warn(f"嘟嘟机器人消息发送失败，错误码：{errno}，错误原因：{error}")
             elif res is not None:
-                logger.warn(f"企业微信机器人消息发送失败，错误码：{res.status_code}，错误原因：{res.reason}")
+                logger.warn(f"嘟嘟机器人消息发送失败，错误码：{res.status_code}，错误原因：{res.reason}")
             else:
-                logger.warn("企业微信机器人消息发送失败，未获取到返回信息")
+                logger.warn("嘟嘟机器人消息发送失败，未获取到返回信息")
         except Exception as msg_e:
-            logger.error(f"企业微信机器人消息发送失败，{str(msg_e)}")
+            logger.error(f"嘟嘟机器人消息发送失败，{str(msg_e)}")
 
     def stop_service(self):
         """
