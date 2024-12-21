@@ -940,16 +940,6 @@
         "level": 1,
         "v2": true
     },
-    "AsWechataMsg": {
-        "name": "嘟嘟机器人消息通知",
-        "description": "嘟嘟。",
-        "labels": "消息通知",
-        "version": "1.0",
-        "icon": "Wecom_B.png",
-        "author": "bwcxljsm",
-        "level": 1,
-        "v2": true
-    },
     "IyuuMsg": {
         "name": "IYUU消息推送",
         "description": "支持使用IYUU发送消息通知。",
