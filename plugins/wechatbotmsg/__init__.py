@@ -175,11 +175,11 @@ class WechatBotMsg(_PluginBase):
 
         try:
             payload = {
-                  "text": "Hello, World!"
+                  "text": text
                 }
 
             payload1 = {
-                  "image_url": "http://example.com/image.jpg"
+                  "image_url": image
                 }
 
             res = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_img", json=payload1)
