@@ -15,7 +15,7 @@ class WechatBotMsg(_PluginBase):
     # 插件图标
     plugin_icon = "Wechat_A.png"
     # 插件版本
-    plugin_version = "1.3"
+    plugin_version = "1.6"
     # 插件作者
     plugin_author = "bwcxljsm"
     # 作者主页
@@ -175,18 +175,12 @@ class WechatBotMsg(_PluginBase):
 
         try:
             payload = {
-              "aters": [
-                ""
-              ],
-              "msg": title + "\n" + text,
-              "receiver": "51602310530@chatroom"
-            }
+                  "text": "Hello, World!"
+                }
 
             payload1 = {
-              "base64": "",
-              "path": image,
-              "receiver": "51602310530@chatroom"
-            }
+                  "image_url": "http://example.com/image.jpg"
+                }
 
             res = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_img", json=payload1)
             if res and res.status_code == 200:
