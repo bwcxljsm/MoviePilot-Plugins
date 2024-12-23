@@ -182,12 +182,12 @@ class WechatBotMsg(_PluginBase):
                   "image_url": image
                 }
 
-            res = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_img", json=payload1)
+            res = RequestUtils().post_res(url=self._webhookurl+"/wx/send_img", json=payload1)
             if res and res.status_code == 200:
                 ret_json = res.json()
                 logger.info(ret_json)
             time.sleep(2)
-            res1 = RequestUtils().post_res(url=self._webhookurl+"/wcf/send_txt", json=payload)
+            res1 = RequestUtils().post_res(url=self._webhookurl+"/wx/send_txt", json=payload)
             if res1 and res1.status_code == 200:
                 ret_json1 = res1.json()
                 logger.info(ret_json1)
